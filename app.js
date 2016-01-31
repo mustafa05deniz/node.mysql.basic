@@ -1,31 +1,28 @@
-#nodejs and mysql basic introduction 
-### # instalition
-'''
-npm install express
+var express = require('express');
+var app = express();
+var mysql  = require('mysql');
 
-npm install mysql 
+app.use(express.static(__dirname + '/'));
 
-npm install ejs 
-'''
+app.set('view engine', 'ejs');  // use view engine to ejs 
 
-### # connection 
+	
 
-'''
+
 var connection = mysql.createConnection({
-  host     : 'mysql server ip adress / if you run local server : localhost ',
-  user     : 'root',
-  password : 'mysql server password',
-  database : 'mysql server database name'
+  host     : '',
+  user     : '',
+  password : '',
+  database : ''
 });
 
 connection.connect();
 
-'''
 
-### # request and response 
+app.get('/',function(req,res){
 
-'''
-var row = [];  // create a list
+
+	var row = [];  // create a list
 
 	 connection.query('SELECT * FROM table_name', function (err, rows) { // open query 
         if (err) {
@@ -42,7 +39,8 @@ var row = [];  // create a list
         }
         res.render('index',{rows:row}) // post index page and its all veriables name is rows 
     })
+	
 
-'''
+});
 
-### # send data 
+app.listen(80);
