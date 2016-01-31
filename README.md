@@ -1,17 +1,17 @@
 
 #nodejs and mysql basic introduction 
 ### # instalition
-'''
+```
 npm install express
 
 npm install mysql 
 
 npm install ejs 
-'''
+```
 
 ### # connection 
 
-'''
+```
 var connection = mysql.createConnection({
   host     : 'mysql server ip adress / if you run local server : localhost ',
   user     : 'root',
@@ -21,11 +21,11 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-'''
+```
 
 ### # request and response 
 
-'''
+```
 var row = [];  // create a list
 
 	 connection.query('SELECT * FROM table_name', function (err, rows) { // open query 
@@ -44,16 +44,7 @@ var row = [];  // create a list
         res.render('index',{rows:row}) // post index page and its all veriables name is rows 
     })
 
-'''
+```
 
-### # send data 
-=======
-#nodejs and mysql basic introduction 
-### # instalition
 
-### # connection 
-
-### # request and response 
-
-### # send data 
 
