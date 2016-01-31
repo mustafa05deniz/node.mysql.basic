@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #nodejs and mysql basic introduction 
 ### # instalition
 '''
@@ -56,4 +56,4 @@ var row = [];  // create a list
 ### # request and response 
 
 ### # send data 
->>>>>>> b72a7b8e9091a1401e9b5771066330e33adaa624
+
